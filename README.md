@@ -1,16 +1,21 @@
-VOLIMITER
+# VOLIMITER
 
 This is a Carbon daemon which limits the system's sound volume. It uses CoreAudio API to get notified about output volume changes and, whenever it exceeds a limit, restores it to the said limit.
 
-Requirements:
+### Requirements:
 
-Mac OS 10.4, PowerPC or Intel.
+OS X 10.10
 
-Installation:
+### Installation:
 
 Though you can run volimiter from any directory, I recommend copying the executable to /usr/bin for easier access.
 
-Usage:
+```
+make build
+sudo cp build/Release/volimiter /usr/bin
+```
+
+### Usage:
 
 You supply the only argument to volimiter, a desired fraction of maximum output volume, for example:
 
@@ -20,6 +25,6 @@ This will limit the default output device's volume to 0.25 of the maximum value.
 
 killall volimiter
 
-Copying:
+### Copying:
 
 This product is distributed as arsware under the terms of GNU General Public License. If you find it useful, say thank-you to the members of ArsTechnica forums (http://episteme.arstechnica.com/6/ubb.x).
